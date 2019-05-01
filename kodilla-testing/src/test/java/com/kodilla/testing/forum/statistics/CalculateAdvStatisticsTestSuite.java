@@ -8,35 +8,32 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
-public class calculateAdvStatisticsTestSuite {
+public class CalculateAdvStatisticsTestSuite {
+
     @Before
     public void before() {
         System.out.println("Test Case: begin");
     }
 
     @After
-
     public void after() {
         System.out.println("Test Case: end");
     }
 
     @BeforeClass
-
     public static void beforeClass() {
         System.out.println("Test Suite: begin");
     }
 
     @AfterClass
-
     public static void afterClass() {
         System.out.println("Test Suite: end");
     }
 
     @Test
-    public void TestCalculateAdvStatistics_1() {
+    public void testCalculateAdvStatistics_PostCountZero() {
 
         StatisticsCalculate statisticsCalculate = new StatisticsCalculate();
-
 
         Assert.assertEquals(0, statisticsCalculate.getUsersNr(), 0.01);
         Assert.assertEquals(0, statisticsCalculate.getPostNr(), 0.01);
@@ -47,7 +44,7 @@ public class calculateAdvStatisticsTestSuite {
     }
 
     @Test
-    public void TestCalculateAdvStatistics_2() {
+    public void testCalculateAdvStatistics_PostMoreThenComments() {
 
         //Given
         Statistics statisticsMock = mock(Statistics.class);
@@ -82,7 +79,7 @@ public class calculateAdvStatisticsTestSuite {
     }
 
     @Test
-    public void TestCalculateAdvStatistics_3() {
+    public void testCalculateAdvStatistics_PostLessThenComments() {
 
         //Given
         Statistics statisticsMock = mock(Statistics.class);

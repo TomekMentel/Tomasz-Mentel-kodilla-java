@@ -1,31 +1,31 @@
 package com.kodilla.testing.collection;
 
 import org.junit.*;
-import java.util.*;
-import java.lang.Integer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CollectionTestSuite {
     @Before
     public void before() {
         System.out.println("Test Case: begin");
     }
-    @After
 
+    @After
     public void after() {
         System.out.println("Test Case: end");
     }
 
     @BeforeClass
-
     public static void beforeClass() {
         System.out.println("Test Suite: begin");
     }
 
     @AfterClass
-
     public static void afterClass() {
         System.out.println("Test Suite: end");
     }
+
     @Test
     public void testOddNumbersExterminatorEmptyList() {
 
@@ -34,8 +34,9 @@ public class CollectionTestSuite {
         OddNumbersExterminator show = new OddNumbersExterminator();
         List<Integer> result = show.exterminate(theList);
 
-         Assert.assertTrue(result.isEmpty());
+        Assert.assertTrue(result.isEmpty());
     }
+
     @Test
     public void testOddNumbersExterminatorNormalList() {
 
@@ -50,11 +51,11 @@ public class CollectionTestSuite {
         List<Integer> result = show.exterminate(theList);
 
         Assert.assertFalse(result.isEmpty());
-        Assert.assertEquals(4,result.size());
-        Assert.assertEquals( 10,result.get(0).longValue());
-        Assert.assertEquals( 2,result.get(1).longValue());
-        Assert.assertEquals( 6,result.get(2).longValue());
-        Assert.assertEquals( 38,result.get(3).longValue());
+        Assert.assertEquals(4, result.size());
+        Assert.assertEquals(10, result.get(0).longValue());
+        Assert.assertEquals(2, result.get(1).longValue());
+        Assert.assertEquals(6, result.get(2).longValue());
+        Assert.assertEquals(38, result.get(3).longValue());
     }
 }
 

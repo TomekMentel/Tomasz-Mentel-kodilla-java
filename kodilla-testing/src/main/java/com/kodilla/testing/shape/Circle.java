@@ -2,7 +2,14 @@ package com.kodilla.testing.shape;
 
 public class Circle implements Shape {
 
-    String name = "Circle";
+    private static final String name = "Circle";
+
+    private final long r;
+
+    public Circle(long radius) {
+        this.r = radius;
+    }
+
     @Override
     public String getShapeName() {
 
@@ -10,8 +17,8 @@ public class Circle implements Shape {
     }
 
     @Override
-    public double getField(double r ,double fi) {
-        double field = (r * r) * fi;
-        return field;
+    public double getField() {
+        return r * r * Math.PI;
     }
 }
+

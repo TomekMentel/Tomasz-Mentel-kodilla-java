@@ -7,7 +7,6 @@ public class ShapeCollectorTestSuite {
     //Test suite for classes of
 
     private static int testCounter = 0;
-    private Shape square;
 
     @BeforeClass
     public static void beforeAllTests() {
@@ -30,7 +29,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape square = new Square();
+        Shape square = new Square(5);
 
         //When
         shapeCollector.addFigure(square);
@@ -44,7 +43,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape triangle = new Triangle();
+        Shape triangle = new Triangle(4, 8);
 
         //When
         shapeCollector.addFigure(triangle);
@@ -58,7 +57,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape circle = new Circle();
+        Shape circle = new Circle(10);
 
         //When
         shapeCollector.addFigure(circle);
@@ -72,7 +71,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape circle = new Circle();
+        Shape circle = new Circle(10);
         shapeCollector.addFigure(circle);
 
         //When
@@ -88,7 +87,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape square = new Square();
+        Shape square = new Square(5);
         shapeCollector.addFigure(square);
 
         //When
@@ -104,7 +103,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape triangle = new Triangle();
+        Shape triangle = new Triangle(4, 8);
         shapeCollector.addFigure(triangle);
 
         //When
@@ -119,7 +118,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape circle = new Circle();
+        Shape circle = new Circle(10);
         shapeCollector.addFigure(circle);
 
         //When
@@ -135,7 +134,7 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Shape square = new Square();
+        Shape square = new Square(5);
         shapeCollector.addFigure(square);
 
         //When
@@ -150,12 +149,12 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Square square = new Square();
+        Square square = new Square(5);
         shapeCollector.addFigure(square);
         //When
-        double squareField = square.getField(4, 4);  //a*b
+        double squareField = square.getField();  //a*a
         //Then
-        Assert.assertEquals(16, squareField, 0.01);
+        Assert.assertEquals(25, squareField, 0.01);
     }
 
     @Test
@@ -163,12 +162,12 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Triangle triangle = new Triangle();
+        Triangle triangle = new Triangle(4, 8);
         shapeCollector.addFigure(triangle);
         //When
-        double squareField = triangle.getField(2, 4); //0.5(a*h)
+        double triangleField = triangle.getField(); //(a*h)/2
         //Then
-        Assert.assertEquals(4, squareField, 0.01);
+        Assert.assertEquals(16, triangleField, 0.01);
     }
 
     @Test
@@ -176,12 +175,12 @@ public class ShapeCollectorTestSuite {
 
         //Given
         ShapeCollector shapeCollector = new ShapeCollector();
-        Circle circle = new Circle();
+        Circle circle = new Circle(10);
         shapeCollector.addFigure(circle);
         //When
-        double squareField = circle.getField(10, 3.14); //(r*r)*3.14
+        double circleField = circle.getField(); //(r*r)*3.14
         //Then
-        Assert.assertEquals(314, squareField, 0.01);
+        Assert.assertEquals(314.15, circleField, 0.01);
     }
 }
 
