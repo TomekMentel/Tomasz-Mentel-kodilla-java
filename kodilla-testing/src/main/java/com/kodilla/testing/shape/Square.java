@@ -6,8 +6,8 @@ public class Square implements Shape {
 
     private final double a;
 
-    public Square(double side_length) {
-        this.a = side_length;
+    public Square(double sideLength) {
+        this.a = sideLength;
     }
 
     @Override

@@ -7,8 +7,8 @@ public class Triangle implements Shape {
     private final double a;
     private final double h;
 
-    public Triangle(double base_length, double height) {
-        this.a = base_length;
+    public Triangle(double baseLength, double height) {
+        this.a = baseLength;
         this.h = height;
     }
 

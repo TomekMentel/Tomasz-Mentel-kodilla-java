@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="11" skipped="0" failures="0" errors="0" timestamp="2019-05-01T20:09:16" hostname="DESKTOP-C5VMB65" time="0.012">
+  <properties/>
+  <testcase name="testGetCircleField" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testRemoveCircleFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testAddFigureTriangle" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testGetSquareField" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testGetCircleFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testRemoveSquareFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testGetSquareFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.002"/>
+  <testcase name="testGetTriangleField" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testAddFigureCircle" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testAddFigureSquare" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testGetTriangleFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <system-out><![CDATA[This is the beginning of tests.
+Preparing to execute test #1
+Preparing to execute test #2
+Preparing to execute test #3
+Preparing to execute test #4
+Preparing to execute test #5
+Preparing to execute test #6
+Preparing to execute test #7
+Preparing to execute test #8
+Preparing to execute test #9
+Preparing to execute test #10
+Preparing to execute test #11
+All tests are finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
