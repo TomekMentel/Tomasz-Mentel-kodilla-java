@@ -3,13 +3,13 @@ package com.kodilla.stream.forumuser;
 import java.time.LocalDate;
 
 public class ForumUser {
-    private final String id;
+    private final int id;
     private final String userName;
     private final char sex;
     private final LocalDate birthDate;
     private final int numberOfPost;
 
-    public ForumUser(final String  id, final String userName,final char sex,
+    public ForumUser(final int  id, final String userName,final char sex,
                      final int yearOfBirth,final int monthOfBirth,final int dayOfBirth,final int numberOfPost) {
         this.id = id;
         this.userName = userName;
@@ -18,7 +18,7 @@ public class ForumUser {
         this.birthDate = LocalDate.of(yearOfBirth, monthOfBirth,dayOfBirth);
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
