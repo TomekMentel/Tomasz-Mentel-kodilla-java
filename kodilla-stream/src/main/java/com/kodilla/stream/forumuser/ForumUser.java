@@ -1,13 +1,20 @@
 package com.kodilla.stream.forumuser;
 
 import java.time.LocalDate;
+import java.time.Period;
 
-public class ForumUser {
+public class ForumUser{
     private final int id;
     private final String userName;
     private final char sex;
-    private final LocalDate birthDate;
     private final int numberOfPost;
+    private final LocalDate birthDate;
+    LocalDate today=LocalDate.now();
+    //static Period period=Period.between(today,getBirthDate());
+ //   Period p = Period.between(getBirthDate(), today);
+
+
+
 
     public ForumUser(final int  id, final String userName,final char sex,
                      final int yearOfBirth,final int monthOfBirth,final int dayOfBirth,final int numberOfPost) {
@@ -48,4 +55,10 @@ public class ForumUser {
                 ", numberOfPost=" + numberOfPost +
                 '}';
     }
+
+ public Period period(){
+        Period period = Period.between(today,getBirthDate());
+     return  period;
+ }
+
 }
