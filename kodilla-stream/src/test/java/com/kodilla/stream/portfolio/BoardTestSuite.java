@@ -141,6 +141,7 @@ public class BoardTestSuite {
     @Test
     public void testAddTaskListAverageWorkingOnTask() {
 
+        //Given
         Board project = prepareTestData();
 
         //When
@@ -154,7 +155,7 @@ public class BoardTestSuite {
                 .mapToInt(t -> t)
                 .average()
                 .orElse(0);
-
+        //Then
         Assert.assertEquals(10, result, 0.1);
     }
 }
