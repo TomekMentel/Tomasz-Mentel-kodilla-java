@@ -12,7 +12,7 @@ public class FlightFind {
         flights.put("Balice", false);
 
         if (flights.containsKey(flight.arrivalAirport))
-            return flights.get(true);
+            return true;
         else
             throw new RouteNotFoundException();
     }
