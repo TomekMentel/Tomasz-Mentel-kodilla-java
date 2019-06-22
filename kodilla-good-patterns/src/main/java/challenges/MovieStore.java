@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class MovieStore {
 
-    public static Map<String, List<String>> getMovies() {
+    private static Map<String, List<String>> getMovies() {
         List<String> ironManTranslations = new ArrayList<>();
         ironManTranslations.add("Żelazny Człowiek");
         ironManTranslations.add("Iron Man");
@@ -29,7 +29,7 @@ public class MovieStore {
         return booksTitlesWithTranslations;
     }
 
-    public static void moviesTitle() {
+    private static void moviesTitle() {
         Map<String, List<String>> title = getMovies();
         String result = title.entrySet().stream()
                 .flatMap(x -> x.getValue().stream())
