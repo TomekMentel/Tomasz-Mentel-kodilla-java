@@ -13,7 +13,6 @@ buildscript {
 plugins {
     id 'java'
 }
-
 group 'com.kodilla'
 version '1.0-SNAPSHOT'
 
