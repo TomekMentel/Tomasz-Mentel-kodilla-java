@@ -1,4 +1,5 @@
 pluginManagement {
+   
     repositories {
         gradlePluginPortal()
     }
@@ -10,5 +11,9 @@ include 'kodilla-exception'
 include 'kodilla-good-patterns'
 include 'kodilla-spring-intro'
 include 'kodilla-spring'
-include 'kodilla-web'
+include 'kodilla-spring web'
+include 'kodilla-patterns'
+include 'kodilla-jdbc'
+include 'kodilla-hibernate'
+
 
