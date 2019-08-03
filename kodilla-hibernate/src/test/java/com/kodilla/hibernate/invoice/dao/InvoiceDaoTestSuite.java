@@ -33,33 +33,34 @@ public class InvoiceDaoTestSuite {
         Item item3 = new Item(new BigDecimal(30), 20, new BigDecimal(300));
         Item item4 = new Item(new BigDecimal(18), 15, new BigDecimal(270));
 
-        product1.getItems().add(item1);
-        product1.getItems().add(item2);
-        product2.getItems().add(item3);
-        product2.getItems().add(item4);
-
         item1.setProduct(product1);
         item2.setProduct(product1);
         item3.setProduct(product2);
         item4.setProduct(product2);
 
         Invoice invoice = new Invoice("1/1/2010");
+        invoice.getItems().add(item1);
+        invoice.getItems().add(item2);
+        invoice.getItems().add(item3);
+        invoice.getItems().add(item4);
+
         item1.setInvoice(invoice);
         item2.setInvoice(invoice);
         item3.setInvoice(invoice);
         item4.setInvoice(invoice);
+
         //When
-        invoiceDao.save(invoice);
-        int id = invoice.getId();
         productDao.save(product1);
         productDao.save(product2);
+        invoiceDao.save(invoice);
+        int id = invoice.getId();
         int id1 = product1.getId();
         int id2 = product2.getId();
 
         //Then
-        Assert.assertNotEquals(0, id);
-        Assert.assertNotEquals(0, id1);
-        Assert.assertNotEquals(0, id2);
+        Assert.assertEquals(4, invoice.getItems().size());
+        Assert.assertEquals("Widelec", product1.getName());
+        Assert.assertEquals("Lyzka", product2.getName());
 
         //CleanUp
         invoiceDao.deleteById(id);

@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@SequenceGenerator(name = "PRIVATE_SEQ", sequenceName = "private_sequence")
 @Entity
 @Table(name = "INVOICES")
 public class Invoice {
@@ -20,7 +21,7 @@ public class Invoice {
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PRIVATE_SEQ")
     @NotNull
     @Column(name = "ID", unique = true)
     public int getId() {
