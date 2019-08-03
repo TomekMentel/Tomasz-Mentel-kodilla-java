@@ -90,7 +90,7 @@ public class CompanyDaoTestSuite {
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
         //When
-        List<Company> findCompany = companyDao.retrieveCompanyName();
+        List<Company> findCompany = companyDao.retrieveCompanyName("sof");
         List<Employee> findEmployee = employeeDao.retrieveEmployeeByName("Linda");
         //Then
         Assert.assertEquals(1, findEmployee.size());

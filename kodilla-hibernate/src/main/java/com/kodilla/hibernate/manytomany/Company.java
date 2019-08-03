@@ -7,7 +7,7 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompanyName",
-        query = "SELECT * FROM COMPANIES  WHERE SUBSTRING(COMPANY_NAME, 1, 3) = 'Dat'",
+        query = "SELECT * FROM COMPANIES  WHERE SUBSTRING(COMPANY_NAME, 1, 3) =:COMPANY",
         resultClass = Company.class)
 @Entity
 @Table(name = "COMPANIES")
