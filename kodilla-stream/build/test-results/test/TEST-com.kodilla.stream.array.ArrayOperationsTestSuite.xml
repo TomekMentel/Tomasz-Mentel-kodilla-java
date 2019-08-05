@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-22T14:08:53" hostname="DESKTOP-C5VMB65" time="0.023">
+  <properties/>
+  <testcase name="testGetAverageEmpty" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.017"/>
+  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.005"/>
+  <system-out><![CDATA[3
+5
+3
+5
+4
+2
+6
+2
+4
+4
+3
+4
+2
+6
+4
+3
+7
+3
+6
+1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.spring.forum.ForumUserTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-06-26T19:29:07" hostname="DESKTOP-C5VMB65" time="0.279">
+  <properties/>
+  <testcase name="testGetUsername" classname="com.kodilla.spring.forum.ForumUserTestSuite" time="0.279"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
