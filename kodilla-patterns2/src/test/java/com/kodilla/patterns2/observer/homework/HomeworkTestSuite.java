@@ -28,7 +28,7 @@ public class HomeworkTestSuite {
         mirekMalczewski.addTask("HashMap");
         alicjaWisniewska.addTask("LinkedList");
         //Then
-        Assert.assertEquals(aliAhmed.getUpdateCount(), 2);
-        Assert.assertEquals(johnSmith.getUpdateCount(), 4);
+        Assert.assertEquals(2,aliAhmed.getUpdateCount());
+        Assert.assertEquals(4,johnSmith.getUpdateCount());
     }
 }
