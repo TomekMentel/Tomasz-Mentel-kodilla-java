@@ -5,9 +5,13 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
+@NamedNativeQuery(
         name = "Employee.retrieveEmployeeByName",
         query = "FROM Employee WHERE firstname=:NAME"
+)
+@NamedNativeQuery(
+        name = "Employee.retrieveEmployeeByNameStartsLetter",
+        query = "FROM Employe WHERE NAME LIKE :%LETTER%"
 )
 @Entity
 @Table(name = "EMPLOYEES")

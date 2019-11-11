@@ -9,6 +9,10 @@ import java.util.List;
         name = "Company.retrieveCompanyName",
         query = "SELECT * FROM COMPANIES  WHERE SUBSTRING(COMPANY_NAME, 1, 3) =:COMPANY",
         resultClass = Company.class)
+@NamedNativeQuery(
+        name = "Company.retrieveCompanyByNameStartsLetter",
+        query = "FROM COMPANIES WHERE NAME LIKE :%LETTER%"
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
